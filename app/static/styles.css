@@ -1,0 +1,22 @@
+.platform-card {
+  border-left: 8px solid var(--bs-success);
+}
+
+.platform-card.status-advertencia {
+  border-left-color: var(--bs-warning);
+}
+
+.platform-card.status-critico {
+  border-left-color: var(--bs-danger);
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0% { background-color: #fff; }
+  50% { background-color: #ffe1e1; }
+  100% { background-color: #fff; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .platform-card.status-critico { animation: none; background-color: #ffe1e1; }
+}
